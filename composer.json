@@ -1,5 +1,9 @@
 {
+    "name": "soderlind/tec-sort-by-end-date",
+    "description": "Makes The Events Calendar sort events by end date instead of start date.",
+    "license": "GPL-2.0-or-later",
     "require": {
         "soderlind/wordpress-github-updater": "^2.0"
     }
 }
+
