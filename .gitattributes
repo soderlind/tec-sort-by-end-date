@@ -1,0 +1,5 @@
+# Export rules — keep vendor out of git, but include it in the release zip (built by CI)
+/vendor export-ignore
+/composer.lock export-ignore
+/.github export-ignore
+/.vscode export-ignore

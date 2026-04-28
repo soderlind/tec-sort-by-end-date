@@ -4,7 +4,7 @@
  * Plugin URI:  https://github.com/soderlind/tec-sort-by-end-date
  * Description: Makes The Events Calendar sort events by end date (ascending) instead of start date.
  *              Useful when you have multi-day events and want the one ending latest to appear last.
- * Version:     1.1.0
+ * Version:     1.1.1
  * Author:      Per Soderlind
  * Author URI:  https://soderlind.no
  * License:     GPL-2.0+
@@ -17,6 +17,20 @@ namespace Soderlind\TEC\SortByEndDate;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
+}
+
+if ( file_exists( __DIR__ . '/vendor/autoload.php' ) ) {
+	require_once __DIR__ . '/vendor/autoload.php';
+}
+
+if ( class_exists( \Soderlind\WordPress\GitHubUpdater::class ) ) {
+	\Soderlind\WordPress\GitHubUpdater::init(
+		github_url:  'https://github.com/soderlind/tec-sort-by-end-date',
+		plugin_file: __FILE__,
+		plugin_slug: 'tec-sort-by-end-date',
+		name_regex:  '/tec-sort-by-end-date\.zip/',
+		branch:      'main',
+	);
 }
 
 /**
