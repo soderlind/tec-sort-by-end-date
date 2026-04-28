@@ -21,9 +21,9 @@ By default, TEC sorts by start date, showing "Hele mai" first. With this plugin,
 
 ## Installation
 
-1. Upload the plugin folder to `/wp-content/plugins/`
-2. Activate through the Plugins menu
-3. Events will now sort by end date on the front end
+1. Download [`tec-sort-by-end-date.zip`](https://github.com/soderlind/tec-sort-by-end-date/releases/latest/download/tec-sort-by-end-date.zip)
+2. Upload via  `Plugins → Add New → Upload Plugin`
+3. Activate via `WordPress Admin → Plugins`
 
 ## Customization
 
