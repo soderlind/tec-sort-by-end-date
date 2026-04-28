@@ -19,6 +19,20 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
+if ( file_exists( __DIR__ . '/vendor/autoload.php' ) ) {
+	require_once __DIR__ . '/vendor/autoload.php';
+}
+
+if ( class_exists( \Soderlind\WordPress\GitHubUpdater::class ) ) {
+	\Soderlind\WordPress\GitHubUpdater::init(
+		github_url:  'https://github.com/soderlind/tec-sort-by-end-date',
+		plugin_file: __FILE__,
+		plugin_slug: 'tec-sort-by-end-date',
+		name_regex:  '/tec-sort-by-end-date\.zip/',
+		branch:      'main',
+	);
+}
+
 /**
  * Hook into posts_clauses so we can rewrite the ORDER BY clause.
  *
